@@ -1,0 +1,2207 @@
+[
+    {
+        "entity_id": "person.brad_c",
+        "state": "unknown",
+        "attributes": {
+            "editable": true,
+            "id": "brad_c",
+            "device_trackers": [],
+            "user_id": "62a4e5c4796d4a698d90c093031263c7",
+            "friendly_name": "Brad C"
+        },
+        "last_changed": "2025-01-17T01:16:55.410260+00:00",
+        "last_reported": "2025-01-17T01:17:28.824661+00:00",
+        "last_updated": "2025-01-17T01:17:28.824661+00:00",
+        "context": {
+            "id": "01JHRXCAVRRASHVFFAN0FZQMCB",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.home_assistant_supervisor_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": true,
+            "display_precision": 0,
+            "installed_version": "2025.02.1",
+            "in_progress": false,
+            "latest_version": "2025.02.1",
+            "release_summary": null,
+            "release_url": "https://github.com/home-assistant/supervisor/releases/tag/2025.02.1",
+            "skipped_version": null,
+            "title": "Home Assistant Supervisor",
+            "update_percentage": null,
+            "entity_picture": "https://brands.home-assistant.io/hassio/icon.png",
+            "friendly_name": "Home Assistant Supervisor Update",
+            "supported_features": 1
+        },
+        "last_changed": "2025-02-13T15:56:22.573739+00:00",
+        "last_reported": "2025-02-13T16:06:22.570747+00:00",
+        "last_updated": "2025-02-13T15:56:22.573739+00:00",
+        "context": {
+            "id": "01JM00D1NDB33RZZHDSS4Q20QQ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.home_assistant_core_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "2024.12.5",
+            "in_progress": false,
+            "latest_version": "2025.2.4",
+            "release_summary": null,
+            "release_url": "https://www.home-assistant.io/latest-release-notes/",
+            "skipped_version": null,
+            "title": "Home Assistant Core",
+            "update_percentage": null,
+            "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+            "friendly_name": "Home Assistant Core Update",
+            "supported_features": 11
+        },
+        "last_changed": "2025-02-13T15:56:22.574105+00:00",
+        "last_reported": "2025-02-14T22:06:22.564613+00:00",
+        "last_updated": "2025-02-14T22:01:22.572581+00:00",
+        "context": {
+            "id": "01JM37P3CC2T9VQW3N1V07VYAQ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.mosquitto_broker_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "6.4.1",
+            "in_progress": false,
+            "latest_version": "6.5.0",
+            "release_summary": "# Changelog\n\n## 6.5.0\n\n- Update base image to Debian 12 (bookworm)\n- Update mosquitto to version 2.0.20\n- Update mosquitto-go-auth to version 2.1.0\n- Update libwebsockets to version 4.3.3\n\n#",
+            "release_url": null,
+            "skipped_version": null,
+            "title": "Mosquitto broker",
+            "update_percentage": null,
+            "entity_picture": "/api/hassio/addons/core_mosquitto/icon",
+            "friendly_name": "Mosquitto broker Update",
+            "supported_features": 25
+        },
+        "last_changed": "2025-02-13T15:56:22.574275+00:00",
+        "last_reported": "2025-02-13T16:06:22.571129+00:00",
+        "last_updated": "2025-02-13T15:56:22.574275+00:00",
+        "context": {
+            "id": "01JM00D1NE4X9B7FE189DZ4BH5",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.zigbee2mqtt_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "1.42.0-2",
+            "in_progress": false,
+            "latest_version": "2.1.1-1",
+            "release_summary": "## 2.1.1-1\n- Updated Zigbee2MQTT to version [`2.1.1`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.1.1)\n\n## 2.1.0-1\n- Updated Zigbee2MQTT to version [`2.1.0`](https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.1.0)\n\n## 2.0.0-2\n\n- Fix addon crash",
+            "release_url": null,
+            "skipped_version": null,
+            "title": "Zigbee2MQTT",
+            "update_percentage": null,
+            "entity_picture": "/api/hassio/addons/45df7312_zigbee2mqtt/icon",
+            "friendly_name": "Zigbee2MQTT Update",
+            "supported_features": 25
+        },
+        "last_changed": "2025-02-13T15:56:22.574451+00:00",
+        "last_reported": "2025-02-13T16:06:22.571263+00:00",
+        "last_updated": "2025-02-13T15:56:22.574451+00:00",
+        "context": {
+            "id": "01JM00D1NEB64A2ZK1HZRH1QXY",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.zigstar_ti_cc2652p_p7_fw_flasher_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "0.4.1",
+            "in_progress": false,
+            "latest_version": "0.4.1",
+            "release_summary": "# Changelog\n\n## 0.4.1\n\n- Minor upgrade\n\n## 0.4.0\n\n- Increased the chip flashing speed by 5 to 10 times compared to previous versions\n\n## 0.3.0\n\n- Add CC2652P7 firmware toggle for UZG-01 v0.2 and up.\n- Add CC2652P Others firmware toggle. Used in Ebyte Modu",
+            "release_url": null,
+            "skipped_version": null,
+            "title": "ZigStar TI CC2652P/P7 FW Flasher",
+            "update_percentage": null,
+            "entity_picture": "/api/hassio/addons/193f5383_zigstar-cc2652p-flasher/icon",
+            "friendly_name": "ZigStar TI CC2652P/P7 FW Flasher Update",
+            "supported_features": 25
+        },
+        "last_changed": "2025-02-13T15:56:22.574569+00:00",
+        "last_reported": "2025-02-13T16:06:22.571337+00:00",
+        "last_updated": "2025-02-13T15:56:22.574569+00:00",
+        "context": {
+            "id": "01JM00D1NESNKJCXJ4SD531X22",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.zigstar_silicon_labs_fw_flasher_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "0.1.1",
+            "in_progress": false,
+            "latest_version": "0.1.1",
+            "release_summary": "# Changelog\n\n## 0.1.1\n\n- Remove gpio from config\n\n## 0.1.0\n\n- Initial version release\n",
+            "release_url": null,
+            "skipped_version": null,
+            "title": "ZigStar Silicon Labs FW Flasher",
+            "update_percentage": null,
+            "entity_picture": "/api/hassio/addons/193f5383_zigstar-silabs-flasher/icon",
+            "friendly_name": "ZigStar Silicon Labs FW Flasher Update",
+            "supported_features": 25
+        },
+        "last_changed": "2025-02-13T15:56:22.574662+00:00",
+        "last_reported": "2025-02-13T16:06:22.571404+00:00",
+        "last_updated": "2025-02-13T15:56:22.574662+00:00",
+        "context": {
+            "id": "01JM00D1NEWJ51883K4XJYV1KX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.zigstar_ti_cc2652p7_fw_flasher_update",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "0.2.0",
+            "in_progress": false,
+            "latest_version": "0.2.0",
+            "release_summary": "# Changelog\n\n## 0.2.0\n\n- Increased the chip flashing speed by 5 to 10 times compared to previous versions\n\n## 0.1.0\n\n- Initial addon release\n",
+            "release_url": null,
+            "skipped_version": null,
+            "title": "ZigStar TI CC2652P7 FW Flasher",
+            "update_percentage": null,
+            "entity_picture": "/api/hassio/addons/193f5383_zigstar-cc2652p7-flasher/icon",
+            "friendly_name": "ZigStar TI CC2652P7 FW Flasher Update",
+            "supported_features": 25
+        },
+        "last_changed": "2025-02-13T15:56:22.574744+00:00",
+        "last_reported": "2025-02-13T16:06:22.571469+00:00",
+        "last_updated": "2025-02-13T15:56:22.574744+00:00",
+        "context": {
+            "id": "01JM00D1NE7EJ8S40YCCJA77D0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.home_assistant_operating_system_update",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "14.1",
+            "in_progress": false,
+            "latest_version": "14.2",
+            "release_summary": null,
+            "release_url": "https://github.com/home-assistant/operating-system/releases/tag/14.2",
+            "skipped_version": null,
+            "title": "Home Assistant Operating System",
+            "update_percentage": null,
+            "entity_picture": "https://brands.home-assistant.io/homeassistant/icon.png",
+            "friendly_name": "Home Assistant Operating System Update",
+            "supported_features": 3
+        },
+        "last_changed": "2025-02-13T15:56:22.574962+00:00",
+        "last_reported": "2025-02-13T16:06:22.571635+00:00",
+        "last_updated": "2025-02-13T15:56:22.574962+00:00",
+        "context": {
+            "id": "01JM00D1NEMP6H625NQZPDX152",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.ceiling_fan_rgb",
+        "state": "2025-02-18T06:30:48.458219+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001b08fb",
+                "light.0xb0ce18140017bf5e",
+                "light.0xb0ce1814001af553"
+            ],
+            "id": "1735948410743",
+            "icon": "mdi:alarm-light",
+            "friendly_name": "ceiling fan - rgb"
+        },
+        "last_changed": "2025-02-18T06:30:48.458327+00:00",
+        "last_reported": "2025-02-18T06:30:48.458327+00:00",
+        "last_updated": "2025-02-18T06:30:48.458327+00:00",
+        "context": {
+            "id": "01JMBW11W7PNTJZD4XK95Z6TEF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.ceiling_fan_bright_white",
+        "state": "2025-01-06T04:07:34.914809+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001b08fb",
+                "light.0xb0ce18140017bf5e",
+                "light.0xb0ce1814001af553"
+            ],
+            "id": "1735948536591",
+            "icon": "mdi:alarm-light",
+            "friendly_name": "ceiling fan - bright white"
+        },
+        "last_changed": "2025-01-17T01:17:01.839014+00:00",
+        "last_reported": "2025-01-17T01:17:01.839014+00:00",
+        "last_updated": "2025-01-17T01:17:01.839014+00:00",
+        "context": {
+            "id": "01JHRXBGGFZ8TS7MNAHAEYNHTZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.hall_rgb",
+        "state": "2025-02-18T06:30:48.458587+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001af427",
+                "light.0xb0ce1814001af6f2"
+            ],
+            "id": "1735949937165",
+            "friendly_name": "hall - rgb"
+        },
+        "last_changed": "2025-02-18T06:30:48.458635+00:00",
+        "last_reported": "2025-02-18T06:30:48.458635+00:00",
+        "last_updated": "2025-02-18T06:30:48.458635+00:00",
+        "context": {
+            "id": "01JMBW11W7PNTJZD4XK95Z6TEF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.hall_bright_white",
+        "state": "2025-01-04T00:25:59.898863+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001af427",
+                "light.0xb0ce1814001af6f2"
+            ],
+            "id": "1735949984311",
+            "friendly_name": "hall - bright white"
+        },
+        "last_changed": "2025-01-17T01:17:01.840383+00:00",
+        "last_reported": "2025-01-17T01:17:01.840383+00:00",
+        "last_updated": "2025-01-17T01:17:01.840383+00:00",
+        "context": {
+            "id": "01JHRXBGGG29G1WC4XXZR41VBF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.hall_dim_white",
+        "state": "2025-02-16T18:01:56.036959+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001af427",
+                "light.0xb0ce1814001af6f2"
+            ],
+            "id": "1735949998358",
+            "friendly_name": "hall - dim white"
+        },
+        "last_changed": "2025-02-16T18:01:56.037072+00:00",
+        "last_reported": "2025-02-16T18:01:56.037072+00:00",
+        "last_updated": "2025-02-16T18:01:56.037072+00:00",
+        "context": {
+            "id": "01JM7YS3J2KWCZH4FW1FW1CBAW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.hall_dim_warm",
+        "state": "2025-02-19T02:18:44.482855+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001af427",
+                "light.0xb0ce1814001af6f2"
+            ],
+            "id": "1735950156532",
+            "friendly_name": "hall - dim warm"
+        },
+        "last_changed": "2025-02-19T02:18:44.482956+00:00",
+        "last_reported": "2025-02-19T02:18:44.482956+00:00",
+        "last_updated": "2025-02-19T02:18:44.482956+00:00",
+        "context": {
+            "id": "01JME007C06T2219G8GYFGQBR2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.hall_low_warm",
+        "state": "2025-01-22T07:00:27.186783+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001af427",
+                "light.0xb0ce1814001af6f2"
+            ],
+            "id": "1735950186421",
+            "friendly_name": "hall - low warm"
+        },
+        "last_changed": "2025-01-22T07:00:27.186931+00:00",
+        "last_reported": "2025-01-22T07:00:27.186931+00:00",
+        "last_updated": "2025-01-22T07:00:27.186931+00:00",
+        "context": {
+            "id": "01JJ6CZXXJ9TSR9VSDEM2TV7Q5",
+            "parent_id": null,
+            "user_id": "62a4e5c4796d4a698d90c093031263c7"
+        }
+    },
+    {
+        "entity_id": "scene.hall_bright_warm",
+        "state": "2025-01-06T02:46:19.156764+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001af427",
+                "light.0xb0ce1814001af6f2"
+            ],
+            "id": "1735950259104",
+            "friendly_name": "hall - bright warm"
+        },
+        "last_changed": "2025-01-17T01:17:01.842211+00:00",
+        "last_reported": "2025-01-17T01:17:01.842211+00:00",
+        "last_updated": "2025-01-17T01:17:01.842211+00:00",
+        "context": {
+            "id": "01JHRXBGGJDY694JTWCMPQXM8N",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.hall_low_white",
+        "state": "2025-01-04T00:25:52.919520+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001af427",
+                "light.0xb0ce1814001af6f2"
+            ],
+            "id": "1735950343348",
+            "friendly_name": "hall - low white"
+        },
+        "last_changed": "2025-01-17T01:17:01.842665+00:00",
+        "last_reported": "2025-01-17T01:17:01.842665+00:00",
+        "last_updated": "2025-01-17T01:17:01.842665+00:00",
+        "context": {
+            "id": "01JHRXBGGJ9PTCR8TSCGBK4PP6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.ceiling_fan_dim_white",
+        "state": "2025-02-16T18:01:56.037404+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001b08fb",
+                "light.0xb0ce18140017bf5e",
+                "light.0xb0ce1814001af553"
+            ],
+            "id": "1735950512789",
+            "icon": "mdi:alarm-light",
+            "friendly_name": "ceiling fan - dim white"
+        },
+        "last_changed": "2025-02-16T18:01:56.037483+00:00",
+        "last_reported": "2025-02-16T18:01:56.037483+00:00",
+        "last_updated": "2025-02-16T18:01:56.037483+00:00",
+        "context": {
+            "id": "01JM7YS3J2KWCZH4FW1FW1CBAW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.ceiling_fan_low_white",
+        "state": "2025-01-04T00:34:43.146741+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001b08fb",
+                "light.0xb0ce18140017bf5e",
+                "light.0xb0ce1814001af553"
+            ],
+            "id": "1735950542023",
+            "icon": "mdi:alarm-light",
+            "friendly_name": "ceiling fan - low white"
+        },
+        "last_changed": "2025-01-17T01:17:01.843584+00:00",
+        "last_reported": "2025-01-17T01:17:01.843584+00:00",
+        "last_updated": "2025-01-17T01:17:01.843584+00:00",
+        "context": {
+            "id": "01JHRXBGGK20GXGE71FM3YDD1K",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.ceiling_fan_bright_warm",
+        "state": "2025-02-19T02:18:44.483199+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001b08fb",
+                "light.0xb0ce18140017bf5e",
+                "light.0xb0ce1814001af553"
+            ],
+            "id": "1735950659336",
+            "icon": "mdi:alarm-light",
+            "friendly_name": "ceiling fan - dim warm"
+        },
+        "last_changed": "2025-02-19T02:18:44.483250+00:00",
+        "last_reported": "2025-02-19T02:18:44.483250+00:00",
+        "last_updated": "2025-02-19T02:18:44.483250+00:00",
+        "context": {
+            "id": "01JME007C06T2219G8GYFGQBR2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.ceiling_fan_low_warm",
+        "state": "2025-01-06T02:46:41.636301+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001b08fb",
+                "light.0xb0ce18140017bf5e",
+                "light.0xb0ce1814001af553"
+            ],
+            "id": "1735950774175",
+            "icon": "mdi:alarm-light",
+            "friendly_name": "ceiling fan - low warm"
+        },
+        "last_changed": "2025-01-17T01:17:01.844512+00:00",
+        "last_reported": "2025-01-17T01:17:01.844512+00:00",
+        "last_updated": "2025-01-17T01:17:01.844512+00:00",
+        "context": {
+            "id": "01JHRXBGGMQHP8S9T9ZTCFPMP2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "scene.ceiling_fan_bright_warm_2",
+        "state": "2025-01-06T02:46:13.328044+00:00",
+        "attributes": {
+            "entity_id": [
+                "light.0xb0ce1814001b08fb",
+                "light.0xb0ce18140017bf5e",
+                "light.0xb0ce1814001af553"
+            ],
+            "id": "1735950820478",
+            "icon": "mdi:alarm-light",
+            "friendly_name": "ceiling fan - bright warm"
+        },
+        "last_changed": "2025-01-17T01:17:01.845082+00:00",
+        "last_reported": "2025-01-17T01:17:01.845082+00:00",
+        "last_updated": "2025-01-17T01:17:01.845082+00:00",
+        "context": {
+            "id": "01JHRXBGGNA2ABHFC29RA9BW54",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "zone.home",
+        "state": "0",
+        "attributes": {
+            "latitude": 45.48328675312313,
+            "longitude": -122.59915078073846,
+            "radius": 100,
+            "passive": false,
+            "persons": [],
+            "editable": true,
+            "icon": "mdi:home",
+            "friendly_name": "Home"
+        },
+        "last_changed": "2025-01-17T01:17:01.892592+00:00",
+        "last_reported": "2025-01-17T01:17:01.892592+00:00",
+        "last_updated": "2025-01-17T01:17:01.892592+00:00",
+        "context": {
+            "id": "01JHRXBGJ4E2KKRRK2Q78AJ4WK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "conversation.home_assistant",
+        "state": "unknown",
+        "attributes": {
+            "friendly_name": "Home Assistant",
+            "supported_features": 1
+        },
+        "last_changed": "2025-01-17T01:17:03.580809+00:00",
+        "last_reported": "2025-01-17T01:17:03.580809+00:00",
+        "last_updated": "2025-01-17T01:17:03.580809+00:00",
+        "context": {
+            "id": "01JHRXBJ6W20DA0PE9VCFJRE14",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sun.sun",
+        "state": "below_horizon",
+        "attributes": {
+            "next_dawn": "2025-02-20T14:32:58.396137+00:00",
+            "next_dusk": "2025-02-21T02:15:49.879991+00:00",
+            "next_midnight": "2025-02-20T08:24:02+00:00",
+            "next_noon": "2025-02-20T20:24:08+00:00",
+            "next_rising": "2025-02-20T15:03:38.017813+00:00",
+            "next_setting": "2025-02-21T01:45:07.285405+00:00",
+            "elevation": -52.93,
+            "azimuth": 334.58,
+            "rising": false,
+            "friendly_name": "Sun"
+        },
+        "last_changed": "2025-02-20T01:47:41.738522+00:00",
+        "last_reported": "2025-02-20T07:23:01.280205+00:00",
+        "last_updated": "2025-02-20T07:23:01.280205+00:00",
+        "context": {
+            "id": "01JMH3T390JJY60T88ZPC7Q6S1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_dawn",
+        "state": "2025-02-20T14:32:58+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next dawn"
+        },
+        "last_changed": "2025-02-19T14:34:33.316065+00:00",
+        "last_reported": "2025-02-20T03:23:01.269338+00:00",
+        "last_updated": "2025-02-19T14:34:33.316065+00:00",
+        "context": {
+            "id": "01JMFA3HF4W76R2KGQ0EJAKYNA",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_dusk",
+        "state": "2025-02-21T02:15:49+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next dusk"
+        },
+        "last_changed": "2025-02-20T02:14:27.832442+00:00",
+        "last_reported": "2025-02-20T03:23:01.269544+00:00",
+        "last_updated": "2025-02-20T02:14:27.832442+00:00",
+        "context": {
+            "id": "01JMGJ53QRD1XBD9MR8MEXJZCV",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_midnight",
+        "state": "2025-02-20T08:24:02+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next midnight"
+        },
+        "last_changed": "2025-02-19T08:24:09.007740+00:00",
+        "last_reported": "2025-02-20T03:23:01.269718+00:00",
+        "last_updated": "2025-02-19T08:24:09.007740+00:00",
+        "context": {
+            "id": "01JMEMXA1F7EXYJM701NJ7Y7GW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_noon",
+        "state": "2025-02-20T20:24:08+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next noon"
+        },
+        "last_changed": "2025-02-19T20:24:14.007269+00:00",
+        "last_reported": "2025-02-20T03:23:01.269888+00:00",
+        "last_updated": "2025-02-19T20:24:14.007269+00:00",
+        "context": {
+            "id": "01JMFY3TDQ6NR08YDDMEKFDZE8",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_rising",
+        "state": "2025-02-20T15:03:38+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next rising"
+        },
+        "last_changed": "2025-02-19T15:05:16.509244+00:00",
+        "last_reported": "2025-02-20T03:23:01.270055+00:00",
+        "last_updated": "2025-02-19T15:05:16.509244+00:00",
+        "context": {
+            "id": "01JMFBVSEXWDYZWSMFEQ1727G7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.sun_next_setting",
+        "state": "2025-02-21T01:45:07+00:00",
+        "attributes": {
+            "device_class": "timestamp",
+            "friendly_name": "Sun Next setting"
+        },
+        "last_changed": "2025-02-20T01:43:41.739420+00:00",
+        "last_reported": "2025-02-20T03:23:01.270219+00:00",
+        "last_updated": "2025-02-20T01:43:41.739420+00:00",
+        "context": {
+            "id": "01JMGGCRXB5TZQ8S136JDN62JN",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "automation.button_single_press",
+        "state": "on",
+        "attributes": {
+            "id": "1736134030674",
+            "last_triggered": "2025-02-19T02:18:44.481321+00:00",
+            "mode": "single",
+            "current": 0,
+            "friendly_name": "button - single press"
+        },
+        "last_changed": "2025-01-17T01:17:05.052819+00:00",
+        "last_reported": "2025-02-19T02:18:44.491820+00:00",
+        "last_updated": "2025-02-19T02:18:44.491820+00:00",
+        "context": {
+            "id": "01JME007C06T2219G8GYFGQBR2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "automation.button_double_press",
+        "state": "on",
+        "attributes": {
+            "id": "1736134125524",
+            "last_triggered": "2025-02-18T06:30:48.455742+00:00",
+            "mode": "single",
+            "current": 0,
+            "friendly_name": "button - double press"
+        },
+        "last_changed": "2025-01-17T01:17:05.053307+00:00",
+        "last_reported": "2025-02-18T06:30:48.465832+00:00",
+        "last_updated": "2025-02-18T06:30:48.465832+00:00",
+        "context": {
+            "id": "01JMBW11W7PNTJZD4XK95Z6TEF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "automation.new_automation",
+        "state": "on",
+        "attributes": {
+            "id": "1736134255666",
+            "last_triggered": "2025-02-16T18:01:56.035156+00:00",
+            "mode": "single",
+            "current": 0,
+            "friendly_name": "New automation"
+        },
+        "last_changed": "2025-01-17T01:17:05.053678+00:00",
+        "last_reported": "2025-02-16T18:01:56.045687+00:00",
+        "last_updated": "2025-02-16T18:01:56.045687+00:00",
+        "context": {
+            "id": "01JM7YS3J2KWCZH4FW1FW1CBAW",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "todo.shopping_list",
+        "state": "0",
+        "attributes": {
+            "friendly_name": "Shopping List",
+            "supported_features": 15
+        },
+        "last_changed": "2025-01-17T01:17:05.093846+00:00",
+        "last_reported": "2025-01-17T01:17:05.093846+00:00",
+        "last_updated": "2025-01-17T01:17:05.093846+00:00",
+        "context": {
+            "id": "01JHRXBKP5ESZTDYE09FR2V740",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.rpi_power_status",
+        "state": "off",
+        "attributes": {
+            "device_class": "problem",
+            "icon": "mdi:raspberry-pi",
+            "friendly_name": "RPi Power status"
+        },
+        "last_changed": "2025-01-17T01:17:05.210659+00:00",
+        "last_reported": "2025-02-20T07:18:07.828711+00:00",
+        "last_updated": "2025-01-17T01:17:05.210659+00:00",
+        "context": {
+            "id": "01JHRXBKSTPF52R4PANJ061J92",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.zigbee2mqtt_bridge_connection_state",
+        "state": "on",
+        "attributes": {
+            "device_class": "connectivity",
+            "friendly_name": "Zigbee2MQTT Bridge Connection state"
+        },
+        "last_changed": "2025-01-17T01:17:08.223722+00:00",
+        "last_reported": "2025-01-17T01:17:08.223722+00:00",
+        "last_updated": "2025-01-17T01:17:08.223722+00:00",
+        "context": {
+            "id": "01JHRXBPQZ29T6KXGE0EXSKJWK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "binary_sensor.0x282c02bfffee94f0_battery_low",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "battery",
+            "friendly_name": "button (a) Battery"
+        },
+        "last_changed": "2025-01-17T01:17:08.222290+00:00",
+        "last_reported": "2025-01-17T01:17:08.222290+00:00",
+        "last_updated": "2025-01-17T01:17:08.222290+00:00",
+        "context": {
+            "id": "01JHRXBPQYKZEKRWBH00EMYR2F",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "button.zigbee2mqtt_bridge_restart",
+        "state": "unknown",
+        "attributes": {
+            "device_class": "restart",
+            "friendly_name": "Zigbee2MQTT Bridge Restart"
+        },
+        "last_changed": "2025-01-17T01:17:08.224262+00:00",
+        "last_reported": "2025-01-17T01:17:08.224262+00:00",
+        "last_updated": "2025-01-17T01:17:08.224262+00:00",
+        "context": {
+            "id": "01JHRXBPR0YFGRB8CSF1Y5RV5A",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce18140017bf5e",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 107,
+            "color_temp_kelvin": 2747,
+            "color_temp": 364,
+            "hs_color": [
+                28.295,
+                64.242
+            ],
+            "rgb_color": [
+                255,
+                168,
+                91
+            ],
+            "xy_color": [
+                0.521,
+                0.387
+            ],
+            "friendly_name": "ceiling fan (b)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-17T01:17:50.770523+00:00",
+        "last_reported": "2025-02-19T02:18:44.824300+00:00",
+        "last_updated": "2025-02-19T02:18:44.824300+00:00",
+        "context": {
+            "id": "01JME007C06T2219G8GYFGQBR2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce1814001b08fb",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 107,
+            "color_temp_kelvin": 2816,
+            "color_temp": 355,
+            "hs_color": [
+                28.156,
+                62.138
+            ],
+            "rgb_color": [
+                255,
+                171,
+                97
+            ],
+            "xy_color": [
+                0.513,
+                0.386
+            ],
+            "friendly_name": "ceiling fan (a)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-17T01:17:50.786421+00:00",
+        "last_reported": "2025-02-19T02:18:44.783223+00:00",
+        "last_updated": "2025-02-19T02:18:44.783223+00:00",
+        "context": {
+            "id": "01JME007C06T2219G8GYFGQBR2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce1814001af553",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 107,
+            "color_temp_kelvin": 2906,
+            "color_temp": 344,
+            "hs_color": [
+                27.987,
+                59.51
+            ],
+            "rgb_color": [
+                255,
+                174,
+                103
+            ],
+            "xy_color": [
+                0.505,
+                0.385
+            ],
+            "friendly_name": "ceiling fan (c)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-17T01:17:50.792254+00:00",
+        "last_reported": "2025-02-19T02:18:44.828377+00:00",
+        "last_updated": "2025-02-19T02:18:44.828377+00:00",
+        "context": {
+            "id": "01JME007C06T2219G8GYFGQBR2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce1814001af427",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 107,
+            "color_temp_kelvin": 2857,
+            "color_temp": 350,
+            "hs_color": [
+                28.077,
+                60.925
+            ],
+            "rgb_color": [
+                255,
+                172,
+                100
+            ],
+            "xy_color": [
+                0.509,
+                0.385
+            ],
+            "friendly_name": "hall ceiling light (a)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-17T01:17:50.794930+00:00",
+        "last_reported": "2025-02-19T02:18:54.607043+00:00",
+        "last_updated": "2025-02-19T02:18:54.607043+00:00",
+        "context": {
+            "id": "01JME00H8FQR7SZRMWG83FCKZG",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce1814001af6f2",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 107,
+            "color_temp_kelvin": 2747,
+            "color_temp": 364,
+            "hs_color": [
+                28.295,
+                64.242
+            ],
+            "rgb_color": [
+                255,
+                168,
+                91
+            ],
+            "xy_color": [
+                0.521,
+                0.387
+            ],
+            "friendly_name": "hall ceiling light (b)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-17T01:17:50.804288+00:00",
+        "last_reported": "2025-02-19T02:18:54.696627+00:00",
+        "last_updated": "2025-02-19T02:18:54.696627+00:00",
+        "context": {
+            "id": "01JME00HB85TTTD0GYQZQ3DEWD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "select.zigbee2mqtt_bridge_log_level",
+        "state": "info",
+        "attributes": {
+            "options": [
+                "error",
+                "warning",
+                "info",
+                "debug"
+            ],
+            "friendly_name": "Zigbee2MQTT Bridge Log level"
+        },
+        "last_changed": "2025-01-17T01:17:08.231030+00:00",
+        "last_reported": "2025-01-17T01:17:08.231030+00:00",
+        "last_updated": "2025-01-17T01:17:08.231030+00:00",
+        "context": {
+            "id": "01JHRXBPR7J5AJFHP9KFKDQAZ6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.zigbee2mqtt_bridge_version",
+        "state": "1.42.0",
+        "attributes": {
+            "icon": "mdi:zigbee",
+            "friendly_name": "Zigbee2MQTT Bridge Version"
+        },
+        "last_changed": "2025-01-17T01:17:08.230862+00:00",
+        "last_reported": "2025-01-17T01:17:08.230862+00:00",
+        "last_updated": "2025-01-17T01:17:08.230862+00:00",
+        "context": {
+            "id": "01JHRXBPR6YD0G50GBYZWXG6YM",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.zigbee2mqtt_bridge_permit_join_timeout",
+        "state": "unknown",
+        "attributes": {
+            "unit_of_measurement": "s",
+            "device_class": "duration",
+            "friendly_name": "Zigbee2MQTT Bridge Permit join timeout"
+        },
+        "last_changed": "2025-01-22T07:09:24.435736+00:00",
+        "last_reported": "2025-01-22T07:09:24.435736+00:00",
+        "last_updated": "2025-01-22T07:09:24.435736+00:00",
+        "context": {
+            "id": "01JJ6DGAJKCJB57KJV4KDCCQRD",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce18140017bf5e_power",
+        "state": "0.2",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "ceiling fan (b) Power"
+        },
+        "last_changed": "2025-01-31T08:18:26.743155+00:00",
+        "last_reported": "2025-01-31T08:18:26.743155+00:00",
+        "last_updated": "2025-01-31T08:18:26.743155+00:00",
+        "context": {
+            "id": "01JJXQ16SQ4C78X17N4Y9BH16P",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce18140017bf5e_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "ceiling fan (b) Energy"
+        },
+        "last_changed": "2025-01-17T01:17:50.772004+00:00",
+        "last_reported": "2025-01-17T01:17:50.772004+00:00",
+        "last_updated": "2025-01-17T01:17:50.772004+00:00",
+        "context": {
+            "id": "01JHRXD09M3HMW8RY29B2SMEC1",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001b08fb_power",
+        "state": "0.2",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "ceiling fan (a) Power"
+        },
+        "last_changed": "2025-02-12T09:24:54.836195+00:00",
+        "last_reported": "2025-02-12T09:24:54.836195+00:00",
+        "last_updated": "2025-02-12T09:24:54.836195+00:00",
+        "context": {
+            "id": "01JKWQKHDMH0EJSHFQVJHJE2CF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001b08fb_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "ceiling fan (a) Energy"
+        },
+        "last_changed": "2025-01-17T01:17:50.785687+00:00",
+        "last_reported": "2025-01-17T01:17:50.785687+00:00",
+        "last_updated": "2025-01-17T01:17:50.785687+00:00",
+        "context": {
+            "id": "01JHRXD0A1241WEADN0CSAVAXN",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001af553_power",
+        "state": "5.2",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "ceiling fan (c) Power"
+        },
+        "last_changed": "2025-02-13T17:56:35.255298+00:00",
+        "last_reported": "2025-02-13T17:56:35.255298+00:00",
+        "last_updated": "2025-02-13T17:56:35.255298+00:00",
+        "context": {
+            "id": "01JM07959QNTTG4WP6H1BYKXYF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001af553_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "ceiling fan (c) Energy"
+        },
+        "last_changed": "2025-01-17T01:17:50.792813+00:00",
+        "last_reported": "2025-01-17T01:17:50.792813+00:00",
+        "last_updated": "2025-01-17T01:17:50.792813+00:00",
+        "context": {
+            "id": "01JHRXD0A87WGBK83ZYRNYEH60",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.hallway_a_power",
+        "state": "0.2",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "hallway (a) Power"
+        },
+        "last_changed": "2025-02-19T09:02:06.428737+00:00",
+        "last_reported": "2025-02-19T09:02:06.428737+00:00",
+        "last_updated": "2025-02-19T09:02:06.428737+00:00",
+        "context": {
+            "id": "01JMEQ2T2W7QC9FB8NKYAF1ZEE",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.hallway_a_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "hallway (a) Energy"
+        },
+        "last_changed": "2025-01-17T01:17:50.795147+00:00",
+        "last_reported": "2025-01-17T01:17:50.795147+00:00",
+        "last_updated": "2025-01-17T01:17:50.795147+00:00",
+        "context": {
+            "id": "01JHRXD0AB1QPAYDNZ1SJMGKNR",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001af6f2_power",
+        "state": "0.6",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "hallway (b) Power"
+        },
+        "last_changed": "2025-02-18T03:19:41.179979+00:00",
+        "last_reported": "2025-02-18T03:19:41.179979+00:00",
+        "last_updated": "2025-02-18T03:19:41.179979+00:00",
+        "context": {
+            "id": "01JMBH33BVKZQE1H7V9BAHFBD6",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001af6f2_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "hallway (b) Energy"
+        },
+        "last_changed": "2025-01-17T01:17:50.803937+00:00",
+        "last_reported": "2025-01-17T01:17:50.803937+00:00",
+        "last_updated": "2025-01-17T01:17:50.803937+00:00",
+        "context": {
+            "id": "01JHRXD0AKFP729W56DHPE828Y",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0x282c02bfffee94f0_battery",
+        "state": "100",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "%",
+            "device_class": "battery",
+            "friendly_name": "button (a) Battery"
+        },
+        "last_changed": "2025-01-17T01:17:50.813013+00:00",
+        "last_reported": "2025-01-17T01:17:50.813013+00:00",
+        "last_updated": "2025-01-17T01:17:50.813013+00:00",
+        "context": {
+            "id": "01JHRXD0AX90P81WF6C9PW0T34",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0x282c02bfffee94f0_action",
+        "state": "unknown",
+        "attributes": {
+            "icon": "mdi:gesture-double-tap",
+            "friendly_name": "button (a) Action"
+        },
+        "last_changed": "2025-02-19T03:06:58.534447+00:00",
+        "last_reported": "2025-02-19T03:06:58.534447+00:00",
+        "last_updated": "2025-02-19T03:06:58.534447+00:00",
+        "context": {
+            "id": "01JME2RHK6M002HYW28XK1XXW2",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.zigbee2mqtt_bridge_permit_join",
+        "state": "off",
+        "attributes": {
+            "icon": "mdi:human-greeting-proximity",
+            "friendly_name": "Zigbee2MQTT Bridge Permit join"
+        },
+        "last_changed": "2025-01-22T07:09:24.435940+00:00",
+        "last_reported": "2025-01-22T07:09:24.435940+00:00",
+        "last_updated": "2025-01-22T07:09:24.435940+00:00",
+        "context": {
+            "id": "01JJ6DGAJK0MMCT4W77M2MC2JP",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce18140017bf5e",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "38",
+            "in_progress": false,
+            "latest_version": "38",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "ceiling fan (b)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-17T01:17:50.772283+00:00",
+        "last_reported": "2025-01-17T01:17:50.772283+00:00",
+        "last_updated": "2025-01-17T01:17:50.772283+00:00",
+        "context": {
+            "id": "01JHRXD09MZG7C1SZ55DRRK207",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce1814001b08fb",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "38",
+            "in_progress": false,
+            "latest_version": "38",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "ceiling fan (a)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-17T01:17:50.786112+00:00",
+        "last_reported": "2025-01-17T01:17:50.786112+00:00",
+        "last_updated": "2025-01-17T01:17:50.786112+00:00",
+        "context": {
+            "id": "01JHRXD0A23JBAGEXT5NGZXC8D",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce1814001af553",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "38",
+            "in_progress": false,
+            "latest_version": "38",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "ceiling fan (c)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-17T01:17:50.792686+00:00",
+        "last_reported": "2025-01-17T01:17:50.792686+00:00",
+        "last_updated": "2025-01-17T01:17:50.792686+00:00",
+        "context": {
+            "id": "01JHRXD0A8BMHBNQ7GYF5Z6TGC",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.hallway_a",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "38",
+            "in_progress": false,
+            "latest_version": "38",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "hallway (a)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-17T01:17:50.795397+00:00",
+        "last_reported": "2025-01-17T01:18:04.357738+00:00",
+        "last_updated": "2025-01-17T01:17:50.795397+00:00",
+        "context": {
+            "id": "01JHRXD0AB4Q6RZ5K0Q81WT363",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce1814001af6f2",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "38",
+            "in_progress": false,
+            "latest_version": "38",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "hallway (b)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-17T01:17:50.804567+00:00",
+        "last_reported": "2025-01-17T01:17:50.804567+00:00",
+        "last_updated": "2025-01-17T01:17:50.804567+00:00",
+        "context": {
+            "id": "01JHRXD0AMRSX0G8XY1EQPRR00",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0x282c02bfffee94f0",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "35",
+            "in_progress": false,
+            "latest_version": "35",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "button (a)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-17T01:17:50.813342+00:00",
+        "last_reported": "2025-01-17T01:17:50.813342+00:00",
+        "last_updated": "2025-01-17T01:17:50.813342+00:00",
+        "context": {
+            "id": "01JHRXD0AX9HQPH8YP18XSJCAZ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "weather.forecast_home",
+        "state": "partlycloudy",
+        "attributes": {
+            "temperature": 44,
+            "dew_point": 42,
+            "temperature_unit": "°F",
+            "humidity": 93,
+            "cloud_coverage": 21.1,
+            "uv_index": 0.0,
+            "pressure": 30.29,
+            "pressure_unit": "inHg",
+            "wind_bearing": 213.4,
+            "wind_speed": 6.96,
+            "wind_speed_unit": "mph",
+            "visibility_unit": "mi",
+            "precipitation_unit": "in",
+            "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+            "friendly_name": "Forecast Home",
+            "supported_features": 3
+        },
+        "last_changed": "2025-02-20T06:45:11.081503+00:00",
+        "last_reported": "2025-02-20T06:45:11.081503+00:00",
+        "last_updated": "2025-02-20T06:45:11.081503+00:00",
+        "context": {
+            "id": "01JMH1MT99ZAXMB3AS73YFBQ6R",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.hp_officejet_4630_series_black_ink",
+        "state": "60",
+        "attributes": {
+            "state_class": "measurement",
+            "marker_high_level": 100,
+            "marker_low_level": 1,
+            "marker_type": "inkCartridge",
+            "unit_of_measurement": "%",
+            "friendly_name": "HP Officejet 4630 series black ink"
+        },
+        "last_changed": "2025-02-20T06:43:15.424188+00:00",
+        "last_reported": "2025-02-20T07:17:50.780577+00:00",
+        "last_updated": "2025-02-20T06:43:15.424188+00:00",
+        "context": {
+            "id": "01JMH1H9B09YWJQ3XZDC6HBXZH",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.hp_officejet_4630_series_tri_color_ink",
+        "state": "90",
+        "attributes": {
+            "state_class": "measurement",
+            "marker_high_level": 100,
+            "marker_low_level": 1,
+            "marker_type": "inkCartridge",
+            "unit_of_measurement": "%",
+            "friendly_name": "HP Officejet 4630 series tri-color ink"
+        },
+        "last_changed": "2025-02-20T06:43:15.424526+00:00",
+        "last_reported": "2025-02-20T07:17:50.780797+00:00",
+        "last_updated": "2025-02-20T06:43:15.424526+00:00",
+        "context": {
+            "id": "01JMH1H9B01Y63GS2K3CC4JCXX",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.hp_officejet_4630_series",
+        "state": "idle",
+        "attributes": {
+            "options": [
+                "idle",
+                "printing",
+                "stopped"
+            ],
+            "info": "HP Officejet 4630 series [C436B9]",
+            "serial": "CN5536933Y05Y0",
+            "location": "",
+            "state_message": null,
+            "state_reason": null,
+            "command_set": "PCL3GUI,PJL,Automatic,JPEG,PCLM,AppleRaster,DW-PCL,802.11,DESKJET,DYN",
+            "uri_supported": "ipp://192.168.0.150/ipp/print",
+            "device_class": "enum",
+            "friendly_name": "HP Officejet 4630 series"
+        },
+        "last_changed": "2025-02-20T06:43:15.424736+00:00",
+        "last_reported": "2025-02-20T07:17:50.780953+00:00",
+        "last_updated": "2025-02-20T06:43:15.424736+00:00",
+        "context": {
+            "id": "01JMH1H9B0EWT8CYZXHN5J23KQ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce1814001610b3",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 33,
+            "color_temp_kelvin": 2849,
+            "color_temp": 351,
+            "hs_color": [
+                28.092,
+                61.159
+            ],
+            "rgb_color": [
+                255,
+                172,
+                99
+            ],
+            "xy_color": [
+                0.51,
+                0.386
+            ],
+            "friendly_name": "kitchen (a)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-22T06:47:31.231391+00:00",
+        "last_reported": "2025-01-22T07:00:48.860601+00:00",
+        "last_updated": "2025-01-22T07:00:48.860601+00:00",
+        "context": {
+            "id": "01JJ6D0K0Y8S9Y1KWW2A8E442T",
+            "parent_id": null,
+            "user_id": "62a4e5c4796d4a698d90c093031263c7"
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001610b3_power",
+        "state": "3.5",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "kitchen (a) Power"
+        },
+        "last_changed": "2025-01-22T07:00:47.130822+00:00",
+        "last_reported": "2025-01-22T07:00:47.130822+00:00",
+        "last_updated": "2025-01-22T07:00:47.130822+00:00",
+        "context": {
+            "id": "01JJ6D0HCTVBBGBM0D17H0RWWJ",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001610b3_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "kitchen (a) Energy"
+        },
+        "last_changed": "2025-01-22T06:44:46.970798+00:00",
+        "last_reported": "2025-01-22T06:45:05.577710+00:00",
+        "last_updated": "2025-01-22T06:45:05.549853+00:00",
+        "context": {
+            "id": "01JJ6C3SWDA4W570SD4W0FX196",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce1814001610b3",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "36",
+            "in_progress": false,
+            "latest_version": "36",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "kitchen (a)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-22T06:44:46.971044+00:00",
+        "last_reported": "2025-01-22T06:45:42.883591+00:00",
+        "last_updated": "2025-01-22T06:45:42.883591+00:00",
+        "context": {
+            "id": "01JJ6C4YB3W260K0TXHANE91WS",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce181400163588",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 31,
+            "color_temp_kelvin": 3194,
+            "color_temp": 313,
+            "hs_color": [
+                27.533,
+                51.866
+            ],
+            "rgb_color": [
+                255,
+                183,
+                123
+            ],
+            "xy_color": [
+                0.478,
+                0.379
+            ],
+            "friendly_name": "kitchen (b)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-22T06:47:54.230807+00:00",
+        "last_reported": "2025-01-22T07:00:37.987211+00:00",
+        "last_updated": "2025-01-22T07:00:37.987211+00:00",
+        "context": {
+            "id": "01JJ6D08CJZBZ4KF4XTS38F2NC",
+            "parent_id": null,
+            "user_id": "62a4e5c4796d4a698d90c093031263c7"
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce181400163588_power",
+        "state": "3.3",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "kitchen (b) Power"
+        },
+        "last_changed": "2025-01-25T06:33:55.855059+00:00",
+        "last_reported": "2025-01-25T06:33:55.855059+00:00",
+        "last_updated": "2025-01-25T06:33:55.855059+00:00",
+        "context": {
+            "id": "01JJE2NGWF9KEP1AFT5KT38R99",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce181400163588_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "kitchen (b) Energy"
+        },
+        "last_changed": "2025-01-22T06:44:47.921428+00:00",
+        "last_reported": "2025-01-22T06:45:26.124318+00:00",
+        "last_updated": "2025-01-22T06:45:26.071783+00:00",
+        "context": {
+            "id": "01JJ6C4DXQKM0NKV301CDVQW5Y",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce181400163588",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "36",
+            "in_progress": false,
+            "latest_version": "36",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "kitchen (b)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-22T06:44:47.922273+00:00",
+        "last_reported": "2025-01-22T06:46:40.665731+00:00",
+        "last_updated": "2025-01-22T06:46:40.665731+00:00",
+        "context": {
+            "id": "01JJ6C6PRST4223RVATGAP0FRA",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce18140015fb0c",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 59,
+            "color_temp_kelvin": 3012,
+            "color_temp": 332,
+            "hs_color": [
+                27.806,
+                56.57
+            ],
+            "rgb_color": [
+                255,
+                178,
+                111
+            ],
+            "xy_color": [
+                0.494,
+                0.383
+            ],
+            "friendly_name": "studio (b)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-22T06:54:59.916899+00:00",
+        "last_reported": "2025-01-28T04:36:29.007161+00:00",
+        "last_updated": "2025-01-28T04:36:29.007161+00:00",
+        "context": {
+            "id": "01JJNK4M4J49SDTJHQDGMEN93R",
+            "parent_id": null,
+            "user_id": "62a4e5c4796d4a698d90c093031263c7"
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce18140015fb0c_power",
+        "state": "4",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "studio (b) Power"
+        },
+        "last_changed": "2025-02-08T02:22:21.270172+00:00",
+        "last_reported": "2025-02-08T02:22:21.270172+00:00",
+        "last_updated": "2025-02-08T02:22:21.270172+00:00",
+        "context": {
+            "id": "01JKHNTY2PCZJAV5KF14B3VXX7",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce18140015fb0c_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "studio (b) Energy"
+        },
+        "last_changed": "2025-01-22T06:53:18.889060+00:00",
+        "last_reported": "2025-01-22T06:54:12.329250+00:00",
+        "last_updated": "2025-01-22T06:54:12.277296+00:00",
+        "context": {
+            "id": "01JJ6CMFSNW7ERKKJDFKY5ZBN9",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce18140015fb0c",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "36",
+            "in_progress": false,
+            "latest_version": "36",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "studio (b)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-22T06:53:18.888850+00:00",
+        "last_reported": "2025-01-22T06:56:58.517231+00:00",
+        "last_updated": "2025-01-22T06:56:58.517231+00:00",
+        "context": {
+            "id": "01JJ6CSJ4NK36HKCP3QMG2NKQ0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce181400160048",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 43,
+            "color_temp_kelvin": 3236,
+            "color_temp": 309,
+            "hs_color": [
+                27.477,
+                50.836
+            ],
+            "rgb_color": [
+                255,
+                185,
+                125
+            ],
+            "xy_color": [
+                0.475,
+                0.38
+            ],
+            "friendly_name": "studio (a)",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-22T06:54:54.221319+00:00",
+        "last_reported": "2025-01-28T04:36:15.996045+00:00",
+        "last_updated": "2025-01-28T04:36:15.996045+00:00",
+        "context": {
+            "id": "01JJNK47E4KRY5QQ5689TYAJKF",
+            "parent_id": null,
+            "user_id": "62a4e5c4796d4a698d90c093031263c7"
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce181400160048_power",
+        "state": "3.6",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "studio (a) Power"
+        },
+        "last_changed": "2025-01-30T04:03:47.689636+00:00",
+        "last_reported": "2025-01-30T04:03:47.689636+00:00",
+        "last_updated": "2025-01-30T04:03:47.689636+00:00",
+        "context": {
+            "id": "01JJTP26V9FCJ5DPZ4017K3V4W",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce181400160048_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "studio (a) Energy"
+        },
+        "last_changed": "2025-01-22T06:53:48.873032+00:00",
+        "last_reported": "2025-01-22T06:54:02.955211+00:00",
+        "last_updated": "2025-01-22T06:54:02.889891+00:00",
+        "context": {
+            "id": "01JJ6CM6M9P7J17Y0MVCGEB7MF",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce181400160048",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "36",
+            "in_progress": false,
+            "latest_version": "36",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "studio (a)",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-22T06:53:48.872658+00:00",
+        "last_reported": "2025-01-22T06:56:02.036196+00:00",
+        "last_updated": "2025-01-22T06:56:02.036196+00:00",
+        "context": {
+            "id": "01JJ6CQTZMRGK74NHBEEJH998F",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "light.0xb0ce1814001b1ee1",
+        "state": "on",
+        "attributes": {
+            "min_color_temp_kelvin": 2000,
+            "max_color_temp_kelvin": 6493,
+            "min_mireds": 154,
+            "max_mireds": 500,
+            "supported_color_modes": [
+                "color_temp",
+                "xy"
+            ],
+            "color_mode": "color_temp",
+            "brightness": 3,
+            "color_temp_kelvin": 2386,
+            "color_temp": 419,
+            "hs_color": [
+                29.192,
+                76.816
+            ],
+            "rgb_color": [
+                255,
+                154,
+                59
+            ],
+            "xy_color": [
+                0.559,
+                0.389
+            ],
+            "friendly_name": "bedroom",
+            "supported_features": 40
+        },
+        "last_changed": "2025-01-26T09:33:17.692839+00:00",
+        "last_reported": "2025-01-26T09:33:17.692839+00:00",
+        "last_updated": "2025-01-26T09:33:17.692839+00:00",
+        "context": {
+            "id": "01JJGZANE72ZTTBXW55E02M9Y0",
+            "parent_id": null,
+            "user_id": "62a4e5c4796d4a698d90c093031263c7"
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001b1ee1_power",
+        "state": "2.5",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "bedroom Power"
+        },
+        "last_changed": "2025-01-29T13:39:09.806983+00:00",
+        "last_reported": "2025-01-29T13:39:09.806983+00:00",
+        "last_updated": "2025-01-29T13:39:09.806983+00:00",
+        "context": {
+            "id": "01JJS4K0VERHEPH1S6X1YM58EK",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0xb0ce1814001b1ee1_energy",
+        "state": "0",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "bedroom Energy"
+        },
+        "last_changed": "2025-01-22T06:59:12.509728+00:00",
+        "last_reported": "2025-01-22T06:59:19.323300+00:00",
+        "last_updated": "2025-01-22T06:59:19.288482+00:00",
+        "context": {
+            "id": "01JJ6CXVKRJQS52B0S5ENZVXP0",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0xb0ce1814001b1ee1",
+        "state": "off",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "38",
+            "in_progress": false,
+            "latest_version": "38",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "bedroom",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-22T06:59:12.509939+00:00",
+        "last_reported": "2025-01-22T07:02:35.014683+00:00",
+        "last_updated": "2025-01-22T07:02:35.014683+00:00",
+        "context": {
+            "id": "01JJ6D3TR6T8RYKFVFEP7WP9CN",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "switch.0x282c02bfffee12e7",
+        "state": "on",
+        "attributes": {
+            "friendly_name": "living room"
+        },
+        "last_changed": "2025-02-03T02:20:30.238458+00:00",
+        "last_reported": "2025-02-03T02:20:30.238458+00:00",
+        "last_updated": "2025-02-03T02:20:30.238458+00:00",
+        "context": {
+            "id": "01JK4SQYMYQ89VX25DCPC32XG5",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "select.0x282c02bfffee12e7_power_on_behavior",
+        "state": "on",
+        "attributes": {
+            "options": [
+                "off",
+                "previous",
+                "on"
+            ],
+            "icon": "mdi:power-settings",
+            "friendly_name": "living room Power-on behavior"
+        },
+        "last_changed": "2025-01-28T04:35:11.402758+00:00",
+        "last_reported": "2025-01-28T04:35:11.402758+00:00",
+        "last_updated": "2025-01-28T04:35:11.402758+00:00",
+        "context": {
+            "id": "01JJNK28AV0GVKT9YV6TDH3WB3",
+            "parent_id": null,
+            "user_id": "62a4e5c4796d4a698d90c093031263c7"
+        }
+    },
+    {
+        "entity_id": "sensor.0x282c02bfffee12e7_power",
+        "state": "34.8",
+        "attributes": {
+            "state_class": "measurement",
+            "unit_of_measurement": "W",
+            "device_class": "power",
+            "friendly_name": "living room Power"
+        },
+        "last_changed": "2025-02-20T07:22:21.217162+00:00",
+        "last_reported": "2025-02-20T07:22:21.217162+00:00",
+        "last_updated": "2025-02-20T07:22:21.217162+00:00",
+        "context": {
+            "id": "01JMH3RW51PNMA976ZZKSTNNP4",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "sensor.0x282c02bfffee12e7_energy",
+        "state": "5.55",
+        "attributes": {
+            "state_class": "total_increasing",
+            "unit_of_measurement": "kWh",
+            "device_class": "energy",
+            "friendly_name": "living room Energy"
+        },
+        "last_changed": "2025-02-20T07:20:52.172472+00:00",
+        "last_reported": "2025-02-20T07:20:52.172472+00:00",
+        "last_updated": "2025-02-20T07:20:52.172472+00:00",
+        "context": {
+            "id": "01JMH3P56C0H9S12KHYAAMAC62",
+            "parent_id": null,
+            "user_id": null
+        }
+    },
+    {
+        "entity_id": "update.0x282c02bfffee12e7",
+        "state": "on",
+        "attributes": {
+            "auto_update": false,
+            "display_precision": 0,
+            "installed_version": "268513360",
+            "in_progress": false,
+            "latest_version": "268513372",
+            "release_summary": null,
+            "release_url": null,
+            "skipped_version": null,
+            "title": null,
+            "update_percentage": null,
+            "device_class": "firmware",
+            "entity_picture": "https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png",
+            "friendly_name": "living room",
+            "supported_features": 5
+        },
+        "last_changed": "2025-01-22T07:05:42.852148+00:00",
+        "last_reported": "2025-01-22T07:05:55.336916+00:00",
+        "last_updated": "2025-01-22T07:05:54.799971+00:00",
+        "context": {
+            "id": "01JJ6D9XVFKMC8K8TMW17C9YR8",
+            "parent_id": null,
+            "user_id": null
+        }
+    }
+]

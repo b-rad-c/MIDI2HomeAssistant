@@ -1,0 +1,32 @@
+https://developers.home-assistant.io/docs/api/rest
+
+curl \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  http://homeassistant.local:8123/api/
+
+curl \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "switch.0x282c02bfffee12e7"}' \
+  http://homeassistant.local:8123/api/services/switch/turn_off
+
+curl \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "light.0xb0ce1814001af6f2", "kelvin": 2000}' \
+  http://homeassistant.local:8123/api/services/light/turn_on
+
+curl \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "light.0xb0ce1814001af6f2", "brightness_pct": 5}' \
+  http://homeassistant.local:8123/api/services/light/turn_on
+
+curl \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "light.0xb0ce1814001af427", "brightness_pct": 75, "kelvin": 2500}' \
+  http://homeassistant.local:8123/api/services/light/turn_on
+
+curl -H "Authorization: Bearer ${TOKEN}" -H "Content-Type: application/json" -d '{"entity_id": "light.0xb0ce1814001af427"}' http://homeassistant.local:8123/api/services/light/turn_off
