@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "curl.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "porttime.h": "c"
     }
 }
