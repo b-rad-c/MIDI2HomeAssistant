@@ -21,6 +21,7 @@
 #include "porttime.h"
 #include "portmidi.h"
 #include "signal.h"
+#include <unistd.h>
 
 #define STRING_MAX 80
 
@@ -72,7 +73,6 @@ int debug = false;	/* never set, but referenced by userio.c */
 PmStream *midi_in;      /* midi input */
 boolean active = false;     /* set when midi_in is ready for reading */
 boolean in_sysex = false;   /* we are reading a sysex message */
-boolean inited = false;     /* suppress printing during command line parsing */
 volatile sig_atomic_t done = 0;       /* when non zero, exit */;
 boolean notes = true;       /* show notes? */
 boolean controls = true;    /* show continuous controllers */
@@ -110,10 +110,9 @@ private    int     get_number(const char *prompt);
 
 char *nanoKONTROL2_getControlName(int control);
 
-/* read a number from console */
-/**/
-int get_number(const char *prompt)
-{
+
+int get_number(const char *prompt) {
+    /* read a number from console */
     int n = 0, i;
     fputs(prompt, stdout);
     while (n != 1) {
@@ -124,8 +123,7 @@ int get_number(const char *prompt)
 }
 
 
-void receive_poll(PtTimestamp timestamp, void *userData)
-{
+void receive_poll(PtTimestamp timestamp, void *userData) {
     PmEvent event;
     int count;
     if (!active) return;
@@ -143,21 +141,19 @@ void interrupt_handler(int dummy) {
 
 /****************************************************************************
 *               main
-* Effect: prompts for parameters, starts monitor
 ****************************************************************************/
 
 int main(int argc, char **argv)
 {
-    char *argument;
 
     PmError err;
     int i;
     int preferred = -1;
     int indexToUse;
 
-    /* use porttime callback to empty midi queue and print */
+    /* select input device */
+    
     Pt_Start(1, receive_poll, 0);
-    /* list device information */
     puts("MIDI input devices:");
     for (i = 0; i < Pm_CountDevices(); i++) {
         const PmDeviceInfo *info = Pm_GetDeviceInfo(i);
@@ -174,7 +170,7 @@ int main(int argc, char **argv)
         indexToUse = get_number("Type input device number: ");
     }
 
-    signal(SIGINT, interrupt_handler);
+    /* init midi */
 
     err = Pm_OpenInput(&midi_in, indexToUse, NULL, 512, NULL, NULL);
     if (err) {
@@ -182,12 +178,22 @@ int main(int argc, char **argv)
         Pt_Stop();
         mmexit(1);
     }
+
+    printf("Midi device %d opened.\n", indexToUse);
+
     Pm_SetFilter(midi_in, filter);
-    inited = true; /* now can document changes, set filter */
-    printf("Midi Monitor ready. (Control+C to exit)\n");
+    printf("Midi Monitor ready. (pid: %d) (Control+C to exit)\n", getpid());
     active = true;
-    char c;
+
+    /* main loop */
+
+    signal(SIGINT, interrupt_handler);
+    signal(SIGTERM, interrupt_handler);
+
     while (!done) {}
+
+    /* clean up and exit */
+
     printf("Midi Monitor exiting.\n");
     active = false;
     Pm_Close(midi_in);
