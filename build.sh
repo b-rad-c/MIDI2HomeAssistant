@@ -5,4 +5,4 @@ if [ ! -d "dist" ]; then
   mkdir dist
 fi
 
-gcc -o dist/mm src/mm.c -lportmidi
+gcc -o dist/m2ha src/m2ha.c -lportmidi -lcurl

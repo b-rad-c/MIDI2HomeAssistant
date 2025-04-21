@@ -11,6 +11,12 @@ curl \
   -d '{"entity_id": "switch.0x282c02bfffee12e7"}' \
   http://homeassistant.local:8123/api/services/switch/turn_off
 
+  curl \
+  -H "Authorization: Bearer ${TOKEN}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "switch.0x282c02bfffee12e7"}' \
+  http://homeassistant.local:8123/api/services/switch/toggle
+
 curl \
   -H "Authorization: Bearer ${TOKEN}" \
   -H "Content-Type: application/json" \

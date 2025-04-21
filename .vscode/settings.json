@@ -2,6 +2,14 @@
     "files.associations": {
         "curl.h": "c",
         "stdio.h": "c",
-        "porttime.h": "c"
+        "porttime.h": "c",
+        "__bit_reference": "c",
+        "bitset": "c",
+        "__memory": "c",
+        "limits": "c",
+        "locale": "c",
+        "ratio": "c",
+        "tuple": "c",
+        "vector": "c"
     }
 }

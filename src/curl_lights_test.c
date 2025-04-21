@@ -6,7 +6,7 @@
 
 
 int switch_command(char mode[]);
-int light_command(char mode[]);
+int toggle_switch(char mode[]);
 int api_call(char *endpoint, char *body);
 
 void print_help() {
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
             return 1;
         }
     } else if (strcmp(argv[1], "light") == 0) {
-        return light_command(argv[2]);
+        return toggle_switch(argv[2]);
     }else{
         printf("Invalid command: %s\n", argv[1]);
         print_help();
@@ -63,7 +63,7 @@ int switch_command(char mode[]) {
 
 }
 
-int light_command(char mode[]) {
+int toggle_switch(char mode[]) {
 
     if (strcmp(mode, "on") == 0) {
         return api_call("light/turn_on", "{\"entity_id\": \"light.0xb0ce1814001af427\", \"brightness_pct\": 42}");
