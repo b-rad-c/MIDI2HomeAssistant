@@ -23,51 +23,38 @@
 #endif
 
 typedef int boolean;
-
-int debug = false;	/* never set, but referenced by userio.c */
-PmStream *midi_in;      /* midi input */
-boolean active = false;     /* set when midi_in is ready for reading */
-volatile sig_atomic_t done = 0;       /* when non zero, exit */;
-
-struct timeval current_timeval;
-long long last_api_call = 0;
-
-char queued_api_endpoint[100] = "";
-char queued_api_body[100] = "";
-
-
-/*****************************************************************************
-*    Imported variables
-*****************************************************************************/
-
 extern  int     abort_flag;
-
-/*****************************************************************************
-*    Routines local to this module
-*****************************************************************************/
-
-private    void    handle_midi_event(PmMessage data);
-private    int     get_user_input_as_number(const char *prompt);
 
 struct kontrol2_control {
     char *name;
     int channel;
 };
 
+/*
+global variables
+*/
+
+PmStream *midi_in;
+int debug = false;	                    /* never set, but referenced by userio.c */
+boolean active = false;                 /* set when midi_in is ready for reading */
+volatile sig_atomic_t done = 0;         /* when non zero, exit */;
+
+struct timeval current_timeval;
+long long last_api_call = 0;
+
+int throttle = 100000;
+char *device_name = "nanoKONTROL2 nanoKONTROL2 _ CTR";
+
+char queued_api_endpoint[100] = "";
+char queued_api_body[100] = "";
+
+/*
+local functions
+*/
+
+private void handle_midi_event(PmMessage data);
 struct kontrol2_control get_nano_kontrol2_control(int control);
-
 int api_call(char *endpoint, char *body);
-
-int get_user_input_as_number(const char *prompt) {
-    /* read a number from console */
-    int n = 0, i;
-    fputs(prompt, stdout);
-    while (n != 1) {
-        n = scanf("%d", &i);
-        while (getchar() != '\n') ;
-    }
-    return i;
-}
 
 
 void poll_midi_device(PtTimestamp timestamp, void *userData) {
@@ -88,78 +75,65 @@ void interrupt_handler(int dummy) {
 
 
 void help_menu(int exit_code) {
-    puts("Usage: mm [run|list] [--device <device_name>]");
+    puts("Usage: mm -dt [run|list] ");
     puts("Commands:");
     puts("  run                     Start the MIDI monitor.");
     puts("  list                    List available MIDI devices.");
+    puts("  help                    Show this help message.");
     puts("Options:");
-    puts("  --device <device_name>  Specify the MIDI device name to use. Default: 'nanoKONTROL2 nanoKONTROL2 _ CTR'");
-    puts("  -h, --help              Show this help message.");
+    printf("  -d <device_name>        Specify the MIDI device name to use. Default: '%s'\n", device_name);
+    printf("  -t <throttle>           Set the throttle for API calls in microseconds. Default: %d\n", throttle);
     exit(exit_code);
 }
 
-
-/****************************************************************************
-*               main
-****************************************************************************/
+/*
+main
+*/
 
 int main(int argc, char **argv) {
-
-    PmError err;
-    int i;
-    char *command;
-    char *device_name = "nanoKONTROL2 nanoKONTROL2 _ CTR";
-    int device_index = -1;
-    int throttle = 100000;
 
     /*
     parse cli arguments
     */
 
+    int opt;
+    char *command;
 
-    /* get command */
-    if (argc > 1) {
-        if (strcmp(argv[1], "run") == 0) {
-            command = "run";
-        } else if (strcmp(argv[1], "list") == 0) {
-            command = "list";
-        } else if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
-            help_menu(0);
-        } else {
-            puts("Unknown command. Exiting.");
-            help_menu(1);
+    while ((opt = getopt(argc, argv, "d:t:")) != -1) {
+        switch (opt) {
+            case 'd':
+                device_name = optarg;
+                break;
+            case 't':
+                throttle = atoi(optarg);
+                break;
+            case '?':
+                help_menu(1);
+                return 1;
         }
+    }
+
+    if (optind < argc) {
+        command = argv[optind];
     }else {
-        puts("No command provided. Exiting.");
+        printf("No command provided.\n");
         help_menu(1);
     }
 
-    /* get options */
-
-    if (argc > 2) {
-        
-        if (strcmp(argv[2], "--device") == 0) {
-            if (argc > 3) {
-                device_name = argv[3];
-            } else {
-                puts("Did not provide device name. Exiting.");
-                help_menu(1);
-            }
-        } else if (strcmp(argv[2], "-h") == 0 || strcmp(argv[2], "--help") == 0) {
-            help_menu(0);
-        } else {
-            puts("Unknown option. Exiting.");
-            help_menu(1);
-        }
+    if (strcmp(command, "help") == 0 || strcmp(command, "--help") == 0 || strcmp(command, "-h") == 0) {
+        help_menu(0);
     }
 
     /* 
     select / list input device 
     */
+
+    int device_index = -1;
     
     Pt_Start(1, poll_midi_device, 0);
     if (strcmp(command, "list") == 0) puts("MIDI input devices:");
 
+    int i;
     for (i = 0; i < Pm_CountDevices(); i++) {
         const PmDeviceInfo *info = Pm_GetDeviceInfo(i);
 
@@ -184,6 +158,7 @@ int main(int argc, char **argv) {
     init midi 
     */
 
+    PmError err;
     err = Pm_OpenInput(&midi_in, device_index, NULL, 512, NULL, NULL);
     if (err) {
         puts(Pm_GetErrorText(err));
@@ -192,7 +167,6 @@ int main(int argc, char **argv) {
     }
 
     printf("Midi device opened: %s\n", device_name);
-
     printf("Midi Monitor ready. (pid: %d) (Control+C to exit)\n", getpid());
     active = true;
 
@@ -204,6 +178,16 @@ int main(int argc, char **argv) {
     signal(SIGTERM, interrupt_handler);
 
     while (!done) {
+
+        /*
+        
+        this is the main loop of the program,
+        it checks for queued messages and sends them to the api,
+        if the throttle time has passed since the last api call.
+        this throttle prevents the sever from being overloaded with requests,
+        but ensures the last value input from the user is sent to the api.
+        
+        */
 
         gettimeofday(&current_timeval, NULL);
         long long time_in_micros = (long long)current_timeval.tv_sec * 1000000 + current_timeval.tv_usec;
@@ -244,10 +228,16 @@ int main(int argc, char **argv) {
 
 private void handle_midi_event(PmMessage data) {
 
-    int midi_command;    /* the current command */
-    int midi_channel;   /* the midi channel of the current event */
-    int midi_control; /* the controller number of the current event */
-    int midi_value;  /* the controller value of the current event */
+    /*
+    this function handles incoming midi events,
+    it maps the message to an api call and queues it
+    by copying the endpoint and body to a global variable
+    */
+
+    int midi_command;
+    int midi_channel;
+    int midi_control;
+    int midi_value;
 
     midi_command = Pm_MessageStatus(data) & MIDI_CODE_MASK;
     midi_channel = Pm_MessageStatus(data) & MIDI_CHN_MASK;
@@ -281,6 +271,7 @@ private void handle_midi_event(PmMessage data) {
 
     fflush(stdout);
 }
+
 
 struct kontrol2_control get_nano_kontrol2_control(int control) {
     struct kontrol2_control c;
@@ -506,7 +497,6 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
     }
     return c;
 }
-
 
 
 size_t write_null(void *buffer, size_t size, size_t nmemb, void *userp) {
