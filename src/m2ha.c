@@ -9,6 +9,7 @@
 #include "signal.h"
 #include <unistd.h>
 #include <curl/curl.h>
+#include <sys/time.h>
 
 
 #define MIDI_CODE_MASK  0xf0
@@ -27,6 +28,9 @@ int debug = false;	/* never set, but referenced by userio.c */
 PmStream *midi_in;      /* midi input */
 boolean active = false;     /* set when midi_in is ready for reading */
 volatile sig_atomic_t done = 0;       /* when non zero, exit */;
+
+struct timeval current_timeval;
+long long last_api_call = 0;
 
 
 /*****************************************************************************
@@ -50,6 +54,7 @@ struct kontrol2_control {
 struct kontrol2_control get_nano_kontrol2_control(int control);
 
 int api_call(char *endpoint, char *body);
+int api_throttler(char *endpoint, char *body);
 
 int get_user_input_as_number(const char *prompt) {
     /* read a number from console */
@@ -231,21 +236,21 @@ private void handle_midi_event(PmMessage data) {
         int int_percent = (int)(percent * 100);
         // printf("Fader %d: %d\n", control.channel, int_percent);
         sprintf(body, "{\"entity_id\": \"light.0xb0ce1814001af427\", \"brightness_pct\": %d}", int_percent);
-        api_call("light/turn_on", body);
+        api_throttler("light/turn_on", body);
 
     } else if (strcmp(control.name, "pot") == 0) {
         int kelvin = (int)(2000 + (percent * (6493 - 2000)));
         // printf("Pot %d: %d\n", control.channel, kelvin);
 
         sprintf(body, "{\"entity_id\": \"light.0xb0ce1814001af427\", \"kelvin\": %d}", kelvin);
-        api_call("light/turn_on", body);
+        api_throttler("light/turn_on", body);
 
     } else {
         if(midi_value == 127) {
             printf("%s (%2d) - press\n", control.name, control.channel);
         }else{
             printf("toggling switch\n");
-            api_call("switch/toggle", "{\"entity_id\": \"switch.0x282c02bfffee12e7\"}");
+            api_throttler("switch/toggle", "{\"entity_id\": \"switch.0x282c02bfffee12e7\"}");
         }
         
     }
@@ -482,6 +487,17 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
 
 size_t write_null(void *buffer, size_t size, size_t nmemb, void *userp) {
     return size * nmemb;
+}
+
+int api_throttler(char *endpoint, char *body) {
+    gettimeofday(&current_timeval, NULL);
+    long long time_in_micros = (long long)current_timeval.tv_sec * 1000000 + current_timeval.tv_usec;
+
+    if (time_in_micros - last_api_call > 100000) {
+        last_api_call = time_in_micros;
+        return api_call(endpoint, body);
+    }
+    return -1;
 }
 
 int api_call(char *endpoint, char *body) {
