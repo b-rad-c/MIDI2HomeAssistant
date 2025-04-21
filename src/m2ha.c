@@ -32,6 +32,9 @@ volatile sig_atomic_t done = 0;       /* when non zero, exit */;
 struct timeval current_timeval;
 long long last_api_call = 0;
 
+char queued_api_endpoint[100] = "";
+char queued_api_body[100] = "";
+
 
 /*****************************************************************************
 *    Imported variables
@@ -54,7 +57,6 @@ struct kontrol2_control {
 struct kontrol2_control get_nano_kontrol2_control(int control);
 
 int api_call(char *endpoint, char *body);
-int api_throttler(char *endpoint, char *body);
 
 int get_user_input_as_number(const char *prompt) {
     /* read a number from console */
@@ -108,6 +110,7 @@ int main(int argc, char **argv) {
     char *command;
     char *device_name = "nanoKONTROL2 nanoKONTROL2 _ CTR";
     int device_index = -1;
+    int throttle = 100000;
 
     /*
     parse cli arguments
@@ -132,7 +135,9 @@ int main(int argc, char **argv) {
     }
 
     /* get options */
+
     if (argc > 2) {
+        
         if (strcmp(argv[2], "--device") == 0) {
             if (argc > 3) {
                 device_name = argv[3];
@@ -198,7 +203,29 @@ int main(int argc, char **argv) {
     signal(SIGINT, interrupt_handler);
     signal(SIGTERM, interrupt_handler);
 
-    while (!done) {}
+    while (!done) {
+
+        gettimeofday(&current_timeval, NULL);
+        long long time_in_micros = (long long)current_timeval.tv_sec * 1000000 + current_timeval.tv_usec;
+
+        if (time_in_micros - last_api_call > throttle) {
+            if (strlen(queued_api_endpoint) > 0) {
+                char *endpoint = malloc(strlen(queued_api_endpoint) + 1);
+                char *body = malloc(strlen(queued_api_body) + 1);
+
+                strcpy(endpoint, queued_api_endpoint);
+                strcpy(body, queued_api_body);
+                
+                strcpy(queued_api_endpoint, "");
+                strcpy(queued_api_body, "");
+
+                api_call(endpoint, body);
+                free(endpoint);
+                free(body);
+            }
+        }
+
+    }
 
     /* 
     clean up and exit 
@@ -230,27 +257,24 @@ private void handle_midi_event(PmMessage data) {
     struct kontrol2_control control = get_nano_kontrol2_control(midi_control);
 
     float percent = (float)midi_value / 127.0f;
-    char body[100];
 
     if (strcmp(control.name, "fader") == 0) {
         int int_percent = (int)(percent * 100);
-        // printf("Fader %d: %d\n", control.channel, int_percent);
-        sprintf(body, "{\"entity_id\": \"light.0xb0ce1814001af427\", \"brightness_pct\": %d}", int_percent);
-        api_throttler("light/turn_on", body);
+        strcpy(queued_api_endpoint, "light/turn_on");
+        sprintf(queued_api_body, "{\"entity_id\": \"light.0xb0ce1814001af427\", \"brightness_pct\": %d}", int_percent);
 
     } else if (strcmp(control.name, "pot") == 0) {
         int kelvin = (int)(2000 + (percent * (6493 - 2000)));
-        // printf("Pot %d: %d\n", control.channel, kelvin);
-
-        sprintf(body, "{\"entity_id\": \"light.0xb0ce1814001af427\", \"kelvin\": %d}", kelvin);
-        api_throttler("light/turn_on", body);
+        
+        strcpy(queued_api_endpoint, "light/turn_on");
+        sprintf(queued_api_body, "{\"entity_id\": \"light.0xb0ce1814001af427\", \"kelvin\": %d}", kelvin);
 
     } else {
         if(midi_value == 127) {
-            printf("%s (%2d) - press\n", control.name, control.channel);
+            // printf("%s (%2d) - press\n", control.name, control.channel);
         }else{
-            printf("toggling switch\n");
-            api_throttler("switch/toggle", "{\"entity_id\": \"switch.0x282c02bfffee12e7\"}");
+            strcpy(queued_api_endpoint, "switch/toggle");
+            strcpy(queued_api_body, "{\"entity_id\": \"switch.0x282c02bfffee12e7\"}");
         }
         
     }
@@ -489,16 +513,6 @@ size_t write_null(void *buffer, size_t size, size_t nmemb, void *userp) {
     return size * nmemb;
 }
 
-int api_throttler(char *endpoint, char *body) {
-    gettimeofday(&current_timeval, NULL);
-    long long time_in_micros = (long long)current_timeval.tv_sec * 1000000 + current_timeval.tv_usec;
-
-    if (time_in_micros - last_api_call > 100000) {
-        last_api_call = time_in_micros;
-        return api_call(endpoint, body);
-    }
-    return -1;
-}
 
 int api_call(char *endpoint, char *body) {
 
