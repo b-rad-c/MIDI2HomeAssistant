@@ -37,6 +37,7 @@ global variables
 PmStream *midi_in;
 int debug = false;	                    /* never set, but referenced by userio.c */
 boolean active = false;                 /* set when midi_in is ready for reading */
+boolean shift = false;                  /* set when shift button is pressed */
 volatile sig_atomic_t done = 0;         /* when non zero, exit */;
 
 struct timeval current_timeval;
@@ -53,6 +54,7 @@ local functions
 */
 
 private void handle_midi_event(PmMessage data);
+char *channel_to_entity_id(int channel, boolean shift);
 struct kontrol2_control get_nano_kontrol2_control(int control);
 int api_call(char *endpoint, char *body);
 
@@ -182,9 +184,9 @@ int main(int argc, char **argv) {
         /*
         
         this is the main loop of the program,
-        it checks for queued messages and sends them to the api,
+        it checks for queued messages and sends them to the api
         if the throttle time has passed since the last api call.
-        this throttle prevents the sever from being overloaded with requests,
+        this throttle prevents the server from being overloaded with requests,
         but ensures the last value input from the user is sent to the api.
         
         */
@@ -250,32 +252,83 @@ private void handle_midi_event(PmMessage data) {
 
     if (strcmp(control.name, "fader") == 0) {
         int int_percent = (int)(percent * 100);
+        char *entity_id = channel_to_entity_id(control.channel, shift);
+
         strcpy(queued_api_endpoint, "light/turn_on");
-        sprintf(queued_api_body, "{\"entity_id\": \"light.0xb0ce1814001af427\", \"brightness_pct\": %d}", int_percent);
+        sprintf(queued_api_body, "{\"entity_id\": \"%s\", \"brightness_pct\": %d}", entity_id, int_percent);
 
     } else if (strcmp(control.name, "pot") == 0) {
         int kelvin = (int)(2000 + (percent * (6493 - 2000)));
+        char *entity_id = channel_to_entity_id(control.channel, shift);
         
         strcpy(queued_api_endpoint, "light/turn_on");
-        sprintf(queued_api_body, "{\"entity_id\": \"light.0xb0ce1814001af427\", \"kelvin\": %d}", kelvin);
+        sprintf(queued_api_body, "{\"entity_id\": \"%s\", \"kelvin\": %d}", entity_id, kelvin);
 
-    } else {
+    } else if (strcmp(control.name, "play") == 0) {
         if(midi_value == 127) {
             // printf("%s (%2d) - press\n", control.name, control.channel);
         }else{
             strcpy(queued_api_endpoint, "switch/toggle");
             strcpy(queued_api_body, "{\"entity_id\": \"switch.0x282c02bfffee12e7\"}");
         }
-        
+    } else if (strcmp(control.name, "mute") == 0) {
+        if(midi_value == 127) {
+            // printf("%s (%2d) - press\n", control.name, control.channel);
+        }else{
+            char *entity_id = channel_to_entity_id(control.channel, shift);
+            strcpy(queued_api_endpoint, "light/turn_off");
+            sprintf(queued_api_body, "{\"entity_id\": \"%s\"}", entity_id);
+        }
+    } else if (strcmp(control.name, "cycle") == 0) {
+        if(midi_value == 127) {
+            shift = true;
+        }else{
+            shift = false;
+        }
+    } else {
+        if(midi_value == 127) {
+            // printf("%s (%2d) - press\n", control.name, control.channel);
+        }else{
+            // printf("%s (%2d) - release\n", control.name, control.channel);
+        }
     }
 
     fflush(stdout);
+}
+
+char *channel_to_entity_id(int channel, boolean shift) {
+
+    if (shift) {
+        switch (channel) {
+            case 1: return "light.0xb0ce18140015fb0c";
+            case 2: return "light.0xb0ce1814001b1ee1";
+            default: return "";
+        }
+    }else {
+        switch (channel) {
+            case 1: return "light.0xb0ce1814001610b3";
+            case 2: return "light.0xb0ce181400163588";
+            case 3: return "light.0xb0ce1814001b08fb";
+            case 4: return "light.0xb0ce18140017bf5e";
+            case 5: return "light.0xb0ce1814001af553";
+            case 6: return "light.0xb0ce1814001af427";
+            case 7: return "light.0xb0ce1814001af6f2";
+            case 8: return "light.0xb0ce181400160048";
+            default: return "";
+        }
+    }
+    
 }
 
 
 struct kontrol2_control get_nano_kontrol2_control(int control) {
     struct kontrol2_control c;
     switch (control) {
+
+        /* 
+        faders
+        */
+
         case 0: 
             c.name = "fader";
             c.channel = 1;
@@ -308,6 +361,10 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
             c.name = "fader";
             c.channel = 8;
             break;
+
+        /*
+        pots
+        */
 
         case 16:
             c.name = "pot";
@@ -342,6 +399,9 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
             c.channel = 8;
             break;
 
+        /*
+        solo buttons
+        */
 
         case 32:
             c.name = "solo";
@@ -375,6 +435,10 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
             c.name = "solo";
             c.channel = 8;
             break;
+
+        /*
+        play controls
+        */
         
         case 41:
             c.name = "play";
@@ -401,6 +465,10 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
             c.name = "cycle";
             c.channel = -1;
             break;
+
+        /*
+        mute buttons
+        */
 
         case 48:
             c.name = "mute";
@@ -435,6 +503,10 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
             c.channel = 8;
             break;
 
+        /*
+        track and markers
+        */
+
         case 58:
             c.name = "track-left";
             c.channel = -1;
@@ -456,6 +528,10 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
             c.name = "marker-right";
             c.channel = -1;
             break;
+
+        /*
+        record buttons
+        */
 
         case 64:
             c.name = "record";
@@ -495,6 +571,7 @@ struct kontrol2_control get_nano_kontrol2_control(int control) {
             c.channel = -1;
             break;
     }
+
     return c;
 }
 
